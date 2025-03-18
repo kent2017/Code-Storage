@@ -2,7 +2,7 @@
 
 ---
 
-# Code Storage
+## Code Storage
 
 A code repository created by kent2017 to store and share code more conveniently.
 
