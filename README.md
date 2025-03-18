@@ -1,8 +1,9 @@
-# 代码存储
-由kent2017制造的代码存储库，以更方便地存储，共享代码。
+# Code Storage
 
-删除文件,分支等重大改动请先发送Issues,避免乱删
+A code repository created by kent2017 to store and share code more conveniently.
 
-如果不发送Issues就乱删东西，你会被制裁的
+Please send Issues before deleting files, branches, and other major changes to avoid random deletions.
 
-严禁在公开赛直接套用本库代码
+If you delete things without sending Issues, you will be sanctioned.
+
+It is strictly forbidden to directly apply this library code in open competitions.
