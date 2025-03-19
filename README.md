@@ -10,4 +10,6 @@ Please send Issues before deleting files, branches, and other major changes to a
 
 If you delete things without sending Issues, you will be sanctioned.
 
+For collaborative papers, please place them in the Collaboration branch
+
 It is strictly forbidden to directly apply this library code in open competitions.
