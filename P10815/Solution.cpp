@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define getchar getchar_unlocked
+//It is non-thread-safe and should be used with caution
 int read(){
     char ch=getchar();
     int f=1,val=0;
