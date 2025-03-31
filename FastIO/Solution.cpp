@@ -27,13 +27,9 @@ void write(int x){
 	return;
 } 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
-    int n=read(),k=read();
-    for(;--n;){
-        k+=read();
-    }
-    write(k);
+	ios::sync_with_stdio(0);
+	cin.tie(0);cout.tie(0);
+	
 	return 0;
 }
 
