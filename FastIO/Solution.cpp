@@ -14,6 +14,9 @@ void write(int x){
 	if(x<0){
 		x*=-1;putchar('-');
 	}
+	if(!x){
+		putchar('0');return; 
+	}
 	int cnts[50],cnt=0;
 	for(;x;x/=10,++cnt){
 		cnts[cnt]=x%10;
