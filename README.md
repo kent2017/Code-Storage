@@ -6,7 +6,7 @@
 
 A code repository created by kent2017 to store and share code more conveniently.
 
-Please send Issues before deleting files, branches, and other major changes to avoid random deletions.
+Please send Issues before deleting files, branches, and other major changes to avoid deletions.
 
 If you delete things without sending Issues, you will be sanctioned.
 
