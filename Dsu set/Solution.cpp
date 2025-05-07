@@ -8,7 +8,7 @@ int getfa(int x){
 	}
 	return fa[x];
 }
-void mer(int x,int y){
+void merge(int x,int y){
 	int xf=getfa(x),yf=getfa(y);
 	if(xf!=yf){
 		fa[xf]=fa[yf];
@@ -24,7 +24,7 @@ int main(){
 		int x,y,z;
 		scanf("%d%d%d",&z,&x,&y);
 		if(z==1){
-			mer(x,y);
+			merge(x,y);
 		}else{
 			if(getfa(x)==getfa(y)){
 				printf("Y");
