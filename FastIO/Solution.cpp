@@ -4,9 +4,7 @@ int input(){
     char ch=getchar();int f=1,val=0;
     for(;ch!='-'&&(ch>'9'||ch<'0');ch=getchar());
     if(ch=='-'){f=-1;ch=getchar();}
-    for(;ch<='9'&&ch>='0';ch=getchar()){
-		val*=10;val+=ch-'0';
-    }
+    for(;ch<='9'&&ch>='0';ch=getchar()){val*=10;val+=ch-'0';}
     return val*f;
 }
 void output(int x){
