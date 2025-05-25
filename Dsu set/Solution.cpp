@@ -1,37 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N=1e5+5;
-int fa[N],n,m;
-int getfa(int x){
-	if(fa[x]!=x){
-		fa[x]=getfa(fa[x]);
+struct dsu{
+	int fa[200001];
+	int getfa(int x){
+		if(fa[x]!=x){
+			fa[x]=getfa(fa[x]);
+		}
+		return fa[x];
 	}
-	return fa[x];
-}
-void merge(int x,int y){
-	int xf=getfa(x),yf=getfa(y);
-	if(xf!=yf){
-		fa[xf]=fa[yf];
+	bool same(int x,int y){
+		return getfa(x)==getfa(y);
 	}
-	return ;
-}
+	void merge(int x,int y){
+		if(!same(x,y)){
+			int xf=getfa(x),yf=getfa(y);
+			fa[xf]=yf;
+		}
+	}
+	void clear(){
+		for(int i=1;i<=200000;++i){
+			fa[i]=i;
+		}
+	}
+}kent2017;
 int main(){
-	scanf("%d %d",&n,&m);
-	for(int i=1;i<=n;++i){
-		fa[i]=i;
-	}
-	for(;m--;){
+    kent2017.clear();
+    int n,m;
+	cin>>n>>m;++m;
+	for(;--m;){
 		int x,y,z;
-		scanf("%d%d%d",&z,&x,&y);
+		cin>>z>>x>>y;
 		if(z==1){
-			merge(x,y);
+			kent2017.merge(x,y);
 		}else{
-			if(getfa(x)==getfa(y)){
-				printf("Y");
-			}else{
-				printf("N");
-			}
-			cout<<endl;
+			puts(kent2017.same(x,y)?"Y":"N");
 		}
 	}
 	return 0;
