@@ -10,7 +10,7 @@ template<> inline double Identity_element<double>(const double&) { return (doubl
 template<> inline long double Identity_element<long double>(const long double&) { return (long double)1; }
 long long mod,a,b;
 template<class T> T fastpow(T Base, long long index) {//只需有*运算符,%运算符,和自定义的Identity_element函数即可使用
-	T tans=1,fans=Base;
+	T tans=Identity_element(Base),fans=Base;
 	for(long long i=1;i<=index;i<<=1){
 		if(i&index){
 			tans=(tans*fans)%mod;
