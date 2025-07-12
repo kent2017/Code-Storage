@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 using namespace std;
 template<typename T> typename std::enable_if<std::is_integral<T>::value>::type input(T &x){
@@ -25,26 +26,23 @@ template<typename T> typename std::enable_if<std::is_integral<T>::value>::type o
     for(;x;x/=10)buf[pos++]=x%10+'0';
     for(;pos--;)putchar(buf[pos]);
 }
-template<typename T> typename std::enable_if<std::is_floating_point<T>::value>::type output(T x,int precision){
-    if(x<0)putchar('-'),x=-x;
-    long long int_part=static_cast<long long>(x);
+template<typename T> typename std::enable_if<std::is_floating_point<T>::value>::type output(T x, int precision){
+    if(x<0) putchar('-'), x=-x;
+    long long int_part = static_cast<long long>(x);
     output(int_part);
+    if(precision==0) return;
     putchar('.');
     x-=int_part;
-    for(int i=0;i<precision;++i){
-        x*=10;
-        putchar(int(x)%10+'0');
-        x-=int(x);
-    }
+    long long frac=static_cast<long long>(x*pow(10,precision)+0.5);
+    output(frac);
 }
 template<> inline void read</*Your type*/>(/*Your type*/ &x) {
-    //Your code
+	//Your code
 }
 template<> inline void output</*Your type*/>(const /*Your type*/ &x) {
 	//Your code
 }
 int main(){
-	ios::sync_with_stdio(0);
-	cin.tie(0);cout.tie(0);
+	
 	return 0;
 }
