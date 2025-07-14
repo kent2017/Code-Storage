@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 template<typename T> typename std::enable_if<std::is_integral<T>::value>::type input(T &x){
