@@ -41,14 +41,11 @@ int/*signed*/ main(){
     ios::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
     cin>>n>>m;
-    for(int i=1;i<=n;++i){
-		cin>>val[i];
-	}
-    for(int i=1;i<=m;++i){
-    	int a,b;
-    	cin>>a>>b;
-    	add(a,b);
-	}
+	for(int i=1;i<=m;++i){
+		int a,b;
+		cin>>a>>b;
+		add(a,b);
+    	}
 	for(int i=1;i<=n;++i){
 		if(!dfn[i]){
 			dfs(i);
@@ -62,8 +59,7 @@ int/*signed*/ main(){
 		edge[i].from=edge[i].to=edge[i].nxt=0;
 	}
 	for(int i=1;i<=n;++i){
-		h[i]=0;
-		w[scc[i]]+=val[i];
+		h[i]=0。
 	}
 	for(auto it=edge2.begin();it!=edge2.end();it++){
 		pair<int,int>x=*it;
